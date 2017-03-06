@@ -14,12 +14,9 @@ public class One_One {
 	}
 
 	public boolean isUniqueP(String str) {
-		char[] seen = new char[str.length()];
-		for (int i = 0; i < str.length(); i++) {
-			seen[i] = str.charAt(i);
-			if (contains(seen, i))
+		for (int i = 0; i < str.length(); i++)
+			if (contains(str.toCharArray(), i))
 				return false;
-		}
 
 		return true;
 	}
